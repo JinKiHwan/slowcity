@@ -11,7 +11,7 @@
   position: relative;
   z-index: 0;
 
-  &__inner {
+  /* &__inner {
     width: 100%;
     max-width: 55vw;
     height: 100%;
@@ -124,11 +124,74 @@
         }
       }
     }
-  }
+  } */
 }
 
 .member {
   width: 100%;
   height: 100vh;
   background: gray;
+}
+
+@mixin imgGlitch($name, $intensity, $width, $height, $top, $left) {
+  $steps: $intensity;
+
+  // Ensure the @keyframes are generated at the root level
+  @at-root {
+    // We need two different ones
+    @for $i from 1 through 2 {
+      @keyframes #{$name}-anim-#{$i} {
+        @for $i from 0 through $steps {
+          #{percentage($i*(1/$steps))} {
+            clip: rect(
+              random($height) + px,
+              $width + px,
+              random($height) + px,
+              0
+            );
+          }
+        }
+      }
+    }
+  }
+
+  > img {
+    position: absolute;
+    top: $top + px;
+    left: $left + px;
+  }
+  > img:nth-child(2),
+  > img:nth-child(3) {
+    clip: rect(0, 0, 0, 0);
+  }
+  > img:nth-child(2) {
+    left: ($left + 2) + px;
+    animation: #{$name}-anim-1 2s infinite linear alternate-reverse;
+  }
+  > img:nth-child(3) {
+    left: ($left - 2) + px;
+    animation: #{$name}-anim-2 3s infinite linear alternate-reverse;
+  }
+}
+
+.image {
+  position: relative;
+  @include imgGlitch('image', 15, 1000, 1000, 10, 10);
+  img {
+    width: 90%;
+    max-width: 300px;
+    //z-index: 10;
+
+    &.grayscale {
+      -webkit-filter: grayscale(1);
+      filter: grayscale(1);
+      //z-index: 5;
+    }
+
+    &.hue-rotate {
+      -webkit-filter: hue-rotate(90deg);
+      filter: hue-rotate(90deg);
+      //z-index: 1;
+    }
+  }
 }
