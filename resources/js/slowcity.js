@@ -32,6 +32,14 @@ const body = document.body;
 }); */
 
 $(document).ready(function () {
+  /* $('.navigation li a').hover(function () {
+    $(this).toggleClass('glitch');
+  }); */
+  $('.navigation li a').click(function () {
+    $('.navigation li a').removeClass('glitch');
+    $(this).addClass('glitch');
+  });
+
   $('.intro-logo').hover(function () {
     $('.intro__wrap').stop().fadeToggle();
   });
