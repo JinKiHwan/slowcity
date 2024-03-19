@@ -22,6 +22,9 @@
       type="image/x-icon"
       href="./resources/images/favicon.png" />
     <!-- CSS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="./resources/css/style.min.css" />
     <!-- SCRIPT -->
     <script defer src="https://www.youtube.com/iframe_api"></script>
@@ -35,92 +38,87 @@
     <script defer src="./resources/js/translation.js"></script>
   </head>
   <body class="ko">
-    <section class="intro">
-      <div class="intro__inner">
-        <ul class="slowcity">
-          <!-- s -->
-          <li class="s m-2">
-            <span><i></i></span>
-            <span><i></i></span>
-          </li>
-          <li class="s2 m-1">
-            <span><i></i></span>
-            <span><i></i></span>
-          </li>
-
-          <!-- l -->
-          <li class="l m-1">
-            <span><i></i></span>
-          </li>
-
-          <!-- o -->
-          <li class="o m-2">
-            <span><i></i></span>
-          </li>
-          <li class="o2 m-1">
-            <span><i></i></span>
-          </li>
-
-          <!-- w -->
-          <li class="w m-2">
-            <span><i></i></span>
-          </li>
-          <li class="w2 m-2">
-            <span><i></i></span>
-          </li>
-          <li class="w3 m-1">
-            <span><i></i></span>
-          </li>
-
-          <!-- c -->
-          <li class="c m-2">
-            <span><i></i></span>
-          </li>
-          <li class="c2 m-1">
-            <span><i></i></span>
-            <span><i></i></span>
-          </li>
-          <!-- i -->
-          <li class="i m-1">
-            <span><i></i></span>
-            <span><i></i></span>
-          </li>
-          <!-- t -->
-          <li class="t m-2">
-            <span><i></i></span>
-          </li>
-          <li class="t2 m-1">
-            <span><i></i></span>
-            <span><i></i></span>
-          </li>
-          <!-- y -->
-          <li class="y m-2">
-            <span><i></i></span>
-          </li>
-          <li class="y2 m-1">
-            <span><i></i></span>
-          </li>
+    <header class="header">
+      <nav>
+        <ul>
+          <li><a href="#intro">intro</a></li>
+          <li><a href="#member">member</a></li>
+          <li><a href="#album">album</a></li>
+          <li><a href="#concert">concert</a></li>
         </ul>
+      </nav>
+    </header>
+    <section class="intro" id="intro">
+      <div class="intro__img-png">
+        <img src="/resources/img/intro/slowcity-logo.png" alt="" />
+      </div>
+      <div class="intro__wrap">
+        <figure class="intro-logo">
+          <img src="/resources/img/intro/logo.png" alt="" />
+          <!-- <img src="/resources/img/intro/logo.png" alt="" class="main" />
+          <img src="/resources/img/intro/logo.png" alt="" class="grayscale" />
+          <img src="/resources/img/intro/logo.png" alt="" class="hue-rotate" /> -->
+        </figure>
+      </div>
+
+      <div class="intro__video">
+        <iframe
+          src="https://www.youtube.com/embed/azsJwkfJ7P8?autoplay=1&mute=1&controls=0&playlist=azsJwkfJ7P8&loop=true"
+          title="엄마는 왜 (demo)"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
       </div>
     </section>
     <section class="member" id="member">
-      member
-      <!-- 멤버는 포켓몬카드효과 ㄱㄱ -->
-
-      <div class="image">
-        <img src="/resources/img/intro/art1.jpg" alt="" class="main" />
-        <img src="/resources/img/intro/art1.jpg" alt="" class="grayscale" />
-        <img src="/resources/img/intro/art1.jpg" alt="" class="hue-rotate" />
+      <div class="member__inner">
+        <div class="member__img">
+          <figure class="agust on">
+            <img src="/resources/img/member/agust_gray.jpg" alt="" />
+          </figure>
+          <figure class="wonha">
+            <img src="/resources/img/member/wonha_gray.jpg" alt="" />
+          </figure>
+          <figure class="kyungyun">
+            <img src="/resources/img/member/kyungyun_gray.jpg" alt="" />
+          </figure>
+          <figure class="kyumin">
+            <img src="/resources/img/member/kyumin_gray.jpg" alt="" />
+          </figure>
+        </div>
+        <div class="member__name">
+          <h3>member</h3>
+          <a
+            href="javascript:void(0)"
+            class="glitch on"
+            id="agust"
+            data-text="agust"
+            >AGUST</a
+          >
+          <a href="javascript:void(0)" id="wonha" data-text="wonha">wonha</a>
+          <a href="javascript:void(0)" id="kyungyun" data-text="kyungyun"
+            >kyungyun</a
+          >
+          <a href="javascript:void(0)" id="kyumin" data-text="kyumin">kyumin</a>
+        </div>
       </div>
-
-      <ul id="prod">
-        <li class="prod_li">
-          <span class="name"></span>
-          <p class="age"></p>
-        </li>
-      </ul>
     </section>
+    <section class="album" id="album">
+      <div class="album__inner">
+        <h3>ALBUM <span>💿</span></h3>
 
-    <section></section>
+        <article class="swiper albumSwiper">
+          <div class="albumSwiper-control">
+            <a href="javascript:void(0)" class="albumSwiper__prev">
+              <img src="/resources/img/album/prev.svg" alt="" />
+            </a>
+            <a href="javascript:void(0)" class="albumSwiper__next">
+              <img src="/resources/img/album/next.svg" alt="" />
+            </a>
+          </div>
+          <ul class="swiper-wrapper"></ul>
+        </article>
+      </div>
+    </section>
+    <section class="concert" id="concert"></section>
   </body>
 </html>

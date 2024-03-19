@@ -1,1 +1,17 @@
 @use '../helpers/' as *;
+
+.header {
+  position: fixed;
+  right: 2vw;
+  bottom: 2vw;
+  color: #fff;
+  z-index: 9;
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      margin: 0 remSet(10px);
+      text-transform: uppercase;
+    }
+  }
+}

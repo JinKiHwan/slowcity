@@ -1,53 +1,80 @@
-/* gsap.to('.slowcity li span i', {
-  x: 0,
-  y: '100%',
-  duration: 1.5,
+const introLogo = document.querySelectorAll('.intro__img-png');
+const introVideo = document.querySelectorAll('.intro__video');
+const introWrap = document.querySelectorAll('.intro__wrap');
+const body = document.body;
+
+/* gsap.to(introLogo, {
+  opacity: 0,
+  delay: 3,
+  duration: 5,
 
   onComplete: function () {
-    gsap.to('.slowcity', {
-      scale: 10,
-      opacity: 0,
-      duration: 1,
+    gsap.to(introWrap, {
+      opacity: 1,
+      delay: 3,
+      duraion: 5,
 
       onComplete: function () {
-        gsap.delayedCall(1, function () {
-          document.querySelector('body').classList.remove('-nonescroll');
-          window.location.href = '#member';
+        gsap.to(introWrap, {
+          background: '#000',
+
+          onComplete: function () {
+            setTimeout(function () {
+              const memberSection = document.getElementById('member');
+              body.classList.remove('-noneScroll');
+              memberSection.scrollIntoView({ behavior: 'smooth' });
+            }, 2000);
+          },
         });
       },
     });
   },
-});
- */
+}); */
 
-/* gsap.to('.art-wrap .art1', {
-  delay: 0.5,
-  clipPath: 'polygon(50% 50%, 100% 0, 0% 100%)',
-  duration: 0.3,
+$(document).ready(function () {
+  $('.intro-logo').hover(function () {
+    $('.intro__wrap').stop().fadeToggle();
+  });
 
-  onComplete: function () {
-    gsap.to('.art-wrap .art2', {
-      clipPath: 'polygon(100% 100%, 100% 0, 0% 100%)',
+  $('.member__name a').click(function () {
+    $('.member__name a').removeClass('on glitch');
+    $(this).toggleClass('on glitch');
+
+    var dataText = $(this).data('text');
+    var correspondingFigure = $('.member__img').find('.' + dataText);
+    $('.member__img figure').removeClass('on');
+    correspondingFigure.addClass('on');
+  });
+
+  $.getJSON('/resources/js/album.json', function (data) {
+    data.forEach(function (album) {
+      var slideHTML = `
+        <li class="swiper-slide">
+        <a href="${album.albumURL}" target="_blank">
+          <figure>
+            <img src="${album.albumThum}" alt="" />
+          </figure>
+          <dl>
+            <dt>${album.albumName}</dt>
+            <dd>${album.albumCategory}</dd>
+            <dd class="date">${album.albumDate}</dd>
+          </dl>
+          </a>
+        </li>
+      `;
+      // Append the slide HTML to the swiper wrapper
+      $('.albumSwiper .swiper-wrapper').append(slideHTML);
     });
-  },
-});
- */
-// JSON 데이터
-var jsonData = [
-  { name: 'kim', age: 10 },
-  { name: 'reas', age: 112 },
-  { name: 'qwr', age: 10 },
-];
 
-// ul 요소 선택
-var ulElement = document.getElementById('prod');
-
-// JSON 데이터를 반복하여 li 태그 생성 및 추가
-jsonData.forEach(function (item) {
-  // li 태그를 생성하고 내용을 채웁니다.
-  ulElement.innerHTML += `
-    <li class="prod_li">
-      <span class="name">${item.name}</span>
-      <p class="age">${item.age}</p>
-    </li>`;
+    // Initialize the swiper
+    var albumSwiper = new Swiper('.albumSwiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 50,
+      speed: 500,
+      navigation: {
+        nextEl: '.albumSwiper__next',
+        prevEl: '.albumSwiper__prev',
+      },
+    });
+  });
 });

@@ -63,8 +63,6 @@ text set in the data-text attribute. */
 .glitch {
   position: relative;
   color: white;
-  font-size: 4em;
-  letter-spacing: 0.5em;
   /* Animation provies a slight random skew. Check bottom of doc
   for more information on how to random skew. */
   animation: glitch-skew 1s infinite linear alternate-reverse;
@@ -100,7 +98,7 @@ text set in the data-text attribute. */
   @for $i from 0 through $steps {
     #{percentage($i*(1/$steps))} {
       clip: rect(random(100) + px, 9999px, random(100) + px, 0);
-      transform: skew((random(100) / 100) + deg);
+      transform: skew((random(50) / 50) + deg);
     }
   }
 }
@@ -111,7 +109,7 @@ text set in the data-text attribute. */
   @for $i from 0 through $steps {
     #{percentage($i*(1/$steps))} {
       clip: rect(random(100) + px, 9999px, random(100) + px, 0);
-      transform: skew((random(100) / 100) + deg);
+      transform: skew((random(50) / 50) + deg);
     }
   }
 }
