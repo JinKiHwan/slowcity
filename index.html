@@ -37,7 +37,7 @@
     <script defer src="./resources/js/tool-1.0.min.js"></script>
     <script defer src="./resources/js/translation.js"></script>
   </head>
-  <body class="ko">
+  <body class="ko -noneScroll">
     <header class="header">
       <nav>
         <ul class="navigation">
@@ -50,14 +50,14 @@
     </header>
     <section class="intro" id="intro">
       <div class="intro__img-png">
-        <img src="/resources/img/intro/slowcity-logo.png" alt="" />
+        <img src="./resources/img/intro/slowcity-logo.png" alt="" />
       </div>
       <div class="intro__wrap">
         <figure class="intro-logo">
-          <img src="/resources/img/intro/logo.png" alt="" />
-          <!-- <img src="/resources/img/intro/logo.png" alt="" class="main" />
-          <img src="/resources/img/intro/logo.png" alt="" class="grayscale" />
-          <img src="/resources/img/intro/logo.png" alt="" class="hue-rotate" /> -->
+          <img src="./resources/img/intro/logo.png" alt="" />
+          <!-- <img src="./resources/img/intro/logo.png" alt="" class="main" />
+          <img src="./resources/img/intro/logo.png" alt="" class="grayscale" />
+          <img src="./resources/img/intro/logo.png" alt="" class="hue-rotate" /> -->
         </figure>
       </div>
 
@@ -73,16 +73,16 @@
       <div class="member__inner">
         <div class="member__img">
           <figure class="agust on">
-            <img src="/resources/img/member/agust_gray.jpg" alt="" />
+            <img src="./resources/img/member/agust_gray.jpg" alt="" />
           </figure>
           <figure class="wonha">
-            <img src="/resources/img/member/wonha_gray.jpg" alt="" />
+            <img src="./resources/img/member/wonha_gray.jpg" alt="" />
           </figure>
           <figure class="kyungyun">
-            <img src="/resources/img/member/kyungyun_gray.jpg" alt="" />
+            <img src="./resources/img/member/kyungyun_gray.jpg" alt="" />
           </figure>
           <figure class="kyumin">
-            <img src="/resources/img/member/kyumin_gray.jpg" alt="" />
+            <img src="./resources/img/member/kyumin_gray.jpg" alt="" />
           </figure>
         </div>
         <div class="member__name">
@@ -109,16 +109,107 @@
         <article class="swiper albumSwiper">
           <div class="albumSwiper-control">
             <a href="javascript:void(0)" class="albumSwiper__prev">
-              <img src="/resources/img/album/prev.svg" alt="" />
+              <img src="./resources/img/album/prev.svg" alt="" />
             </a>
             <a href="javascript:void(0)" class="albumSwiper__next">
-              <img src="/resources/img/album/next.svg" alt="" />
+              <img src="./resources/img/album/next.svg" alt="" />
             </a>
           </div>
           <ul class="swiper-wrapper"></ul>
         </article>
       </div>
+
+      <article class="album__popup">
+        <div class="album__popup-wrap">
+          <div class="album-img">
+            <figure class="album-thum">
+              <img src="./resources/img/album/album_01.jpg" alt="" />
+            </figure>
+            <figure class="album-soundtrack">
+              <img src="./resources/img/album/soundtrack.png" alt="" />
+            </figure>
+          </div>
+          <div class="album-info">
+            <dl>
+              <dt>제목</dt>
+              <dd>앨범카테고리</dd>
+              <dd>날짜</dd>
+            </dl>
+          </div>
+        </div>
+
+        <div class="album-youtube-iframe">
+          <iframe
+            src="https://www.youtube.com/embed/{{밸류값}}"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </article>
     </section>
-    <section class="concert" id="concert"></section>
+    <section class="concert" id="concert">
+      <div class="loop-text swiper">
+        <div class="loop-text-road swiper-wrapper">
+          <span class="swiper-slide">SLOWCITY</span>
+          <span class="swiper-slide">SLOWCITY</span>
+          <span class="swiper-slide">SLOWCITY</span>
+          <span class="swiper-slide">SLOWCITY</span>
+          <span class="swiper-slide">SLOWCITY</span>
+          <span class="swiper-slide">SLOWCITY</span>
+          <span class="swiper-slide">SLOWCITY</span>
+          <span class="swiper-slide">SLOWCITY</span>
+          <span class="swiper-slide">SLOWCITY</span>
+          <span class="swiper-slide">SLOWCITY</span>
+          <span class="swiper-slide">SLOWCITY</span>
+          <span class="swiper-slide">SLOWCITY</span>
+        </div>
+      </div>
+      <div class="loop-text loop-text2 swiper" dir="rtl">
+        <div class="loop-text-road swiper-wrapper">
+          <span class="swiper-slide">CONCERT</span>
+          <span class="swiper-slide">CONCERT</span>
+          <span class="swiper-slide">CONCERT</span>
+          <span class="swiper-slide">CONCERT</span>
+          <span class="swiper-slide">CONCERT</span>
+          <span class="swiper-slide">CONCERT</span>
+          <span class="swiper-slide">CONCERT</span>
+          <span class="swiper-slide">CONCERT</span>
+          <span class="swiper-slide">CONCERT</span>
+          <span class="swiper-slide">CONCERT</span>
+          <span class="swiper-slide">CONCERT</span>
+          <span class="swiper-slide">CONCERT</span>
+        </div>
+      </div>
+
+      <div class="concert__inner">
+        <a
+          href="https://www.instagram.com/p/C4iXIQpJbnz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank">
+          <figure>
+            <img src="./resources/img/concert/concert1.jpg" alt="" />
+          </figure>
+        </a>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__inner">
+        <ul>
+          <li>SLOWCITY</li>
+          <li>
+            <a
+              href="https://www.instagram.com/slowcity_official/"
+              target="_blank">
+              <img src="./resources/img/footer/instagram.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/@slowcity_official"
+              target="_blank">
+              <img src="./resources/img/footer/youtube.png" alt="" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

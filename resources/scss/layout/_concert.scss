@@ -1,0 +1,57 @@
+@use '../helpers/' as *;
+
+.concert {
+  position: relative;
+  overflow: hidden;
+  margin-top: remSet(100px);
+  z-index: 0;
+  padding: 4vw 0;
+
+  .loop-text {
+    width: 100%;
+    height: 3vw;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    background: #e6e6e6;
+    padding: 0.5vw 0;
+    pointer-events: none;
+    overflow: hidden;
+
+    &.loop-text2 {
+      top: auto;
+      bottom: 0;
+    }
+
+    span {
+      font-size: 2vw;
+      transition: transform 0.3s;
+      display: block;
+      letter-spacing: -1px;
+    }
+
+    .loop-text-road {
+      display: flex;
+      transition-timing-function: linear;
+    }
+  }
+
+  &__inner {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      height: 100%;
+      figure {
+        height: 100%;
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

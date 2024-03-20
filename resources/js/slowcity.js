@@ -1,9 +1,37 @@
+/* gsap */
+let links = gsap.utils.toArray('.navigation li a');
+
+links.forEach((link) => {
+  let element = document.querySelector(link.getAttribute('href')),
+    linkST = ScrollTrigger.create({
+      trigger: element,
+      start: 'top top',
+    });
+
+  ScrollTrigger.create({
+    trigger: element,
+    start: 'top center',
+    end: 'bottom center',
+    onToggle: (self) => setActive(link),
+  });
+});
+
+function setActive(link) {
+  links.forEach((el) => el.classList.remove('glitch'));
+  link.classList.add('glitch');
+}
+
 const introLogo = document.querySelectorAll('.intro__img-png');
 const introVideo = document.querySelectorAll('.intro__video');
 const introWrap = document.querySelectorAll('.intro__wrap');
 const body = document.body;
+const nav = document.querySelectorAll('.navigation');
 
-/* gsap.to(introLogo, {
+gsap.set(nav, {
+  opacity: 0,
+});
+
+gsap.to(introLogo, {
   opacity: 0,
   delay: 3,
   duration: 5,
@@ -24,22 +52,19 @@ const body = document.body;
               body.classList.remove('-noneScroll');
               memberSection.scrollIntoView({ behavior: 'smooth' });
             }, 2000);
+
+            gsap.to(nav, {
+              opacity: 1,
+            });
           },
         });
       },
     });
   },
-}); */
+});
 
+/* //gsap */
 $(document).ready(function () {
-  /* $('.navigation li a').hover(function () {
-    $(this).toggleClass('glitch');
-  }); */
-  $('.navigation li a').click(function () {
-    $('.navigation li a').removeClass('glitch');
-    $(this).addClass('glitch');
-  });
-
   $('.intro-logo').hover(function () {
     $('.intro__wrap').stop().fadeToggle();
   });
@@ -54,20 +79,20 @@ $(document).ready(function () {
     correspondingFigure.addClass('on');
   });
 
-  $.getJSON('/resources/js/album.json', function (data) {
+  $.getJSON('./resources/js/album.json', function (data) {
     data.forEach(function (album) {
       var slideHTML = `
-        <li class="swiper-slide">
-        <a href="${album.albumURL}" target="_blank">
-          <figure>
-            <img src="${album.albumThum}" alt="" />
-          </figure>
-          <dl>
-            <dt>${album.albumName}</dt>
-            <dd>${album.albumCategory}</dd>
-            <dd class="date">${album.albumDate}</dd>
-          </dl>
-          </a>
+        <li class="swiper-slide" onClick="openPopup()">
+          <div data-album="${album.albumURL}">
+            <figure>
+              <img src="${album.albumThum}" alt="" />
+            </figure>
+            <dl>
+              <dt>${album.albumName}</dt>
+              <dd>${album.albumCategory}</dd>
+              <dd class="date">${album.albumDate}</dd>
+            </dl>
+          </div>
         </li>
       `;
       // Append the slide HTML to the swiper wrapper
@@ -85,4 +110,54 @@ $(document).ready(function () {
       },
     });
   });
+
+  // album__popup-wrap을 제외한 부분에 대한 클릭 이벤트 처리
+  $('.album__popup').on('click', function (event) {
+    if (!$(event.target).closest('.album__popup-wrap').length) {
+      $('.album__popup').removeClass('on');
+      $('.album-soundtrack').removeClass('on');
+      $('.album-youtube-iframe').empty(); // iframe 삭제
+    }
+  });
+
+  var loopText = new Swiper('.loop-text', {
+    slidesPerView: 'auto',
+    spaceBetween: 50,
+    speed: 3000,
+    autoplay: {
+      delay: 1,
+      desableOnInteraction: false,
+    },
+    loop: true,
+    slidesPerView: 'auto',
+    freemode: true,
+  });
 });
+
+function openPopup(param) {
+  // 클릭한 요소에서 data-album 값을 가져옴
+  var albumThum = $(event.currentTarget).find('img').attr('src');
+  var albumName = $(event.currentTarget).find('dt').text();
+  var albumCategory = $(event.currentTarget).find('dd').eq(0).text();
+  var albumDate = $(event.currentTarget).find('dd').eq(1).text();
+  var albumURL = $(event.currentTarget).find('div').data('album');
+
+  // 앨범 썸네일 업데이트
+  $('.album-thum img').attr('src', albumThum);
+
+  // 앨범 정보 업데이트
+  $('.album-info dt').text(albumName);
+  $('.album-info dd').eq(0).text(albumCategory);
+  $('.album-info dd').eq(1).text(albumDate);
+
+  // 팝업 열기
+  $('.album__popup').addClass('on');
+  $('.album-soundtrack').addClass('on');
+
+  //유튜브 append
+  var iframeHTML = `<iframe src="https://www.youtube.com/embed/${albumURL}?autoplay=1&mute=0&controls=0&playlist=${albumURL}&loop=true" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+  `;
+
+  $('.album-youtube-iframe').html(iframeHTML);
+}

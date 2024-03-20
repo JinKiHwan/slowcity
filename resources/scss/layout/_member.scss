@@ -9,13 +9,27 @@
     height: 100%;
     margin: 0 auto;
     display: flex;
+    align-items: center;
     color: #fff;
   }
 
   &__img {
     position: relative;
+    z-index: 0;
     width: 45%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 763 / 583;
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: block;
+      box-shadow: -5px -5px 10px rgba($color: #fff, $alpha: 0.5);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
 
     figure {
       position: absolute;

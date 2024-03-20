@@ -1,142 +1,142 @@
 [
   {
-    "albumThum": "/resources/img/album/album_20.jpg",
+    "albumThum": "./resources/img/album/album_20.jpg",
     "albumName": "사랑에 빠져 허우적 대",
     "albumCategory": "Single",
     "albumDate": "2024.03.09",
-    "albumURL": "https://www.youtube.com/watch?v=nxLyG6TTR00&list=OLAK5uy_mm-PVtDnlAsqEOh6OHspRJi04ULO5fVaE"
+    "albumURL": "nxLyG6TTR00"
   },
   {
-    "albumThum": "/resources/img/album/album_19.jpg",
+    "albumThum": "./resources/img/album/album_19.jpg",
     "albumName": "꿈",
     "albumCategory": "Single",
     "albumDate": "2023.12.16",
-    "albumURL": "https://www.youtube.com/watch?v=FetPg2tVB9U&list=OLAK5uy_lzWtvNfxcVRQKkBjicTLgbkMFrdkoxOO4"
+    "albumURL": "FetPg2tVB9U"
   },
   {
-    "albumThum": "/resources/img/album/album_18.jpg",
+    "albumThum": "./resources/img/album/album_18.jpg",
     "albumName": "자기야 오늘은 자고 가",
     "albumCategory": "Single",
     "albumDate": "2023.11.18",
-    "albumURL": "https://www.youtube.com/watch?v=LAG4FSkaB5c&list=OLAK5uy_lgrv6SLZT8YRgPKa_3qK34Q7Yj4bf5nJw"
+    "albumURL": "LAG4FSkaB5c"
   },
   {
-    "albumThum": "/resources/img/album/album_17.jpg",
+    "albumThum": "./resources/img/album/album_17.jpg",
     "albumName": "Wave",
     "albumCategory": "Single",
     "albumDate": "2023.10.16",
-    "albumURL": "https://www.youtube.com/watch?v=OcY1cK2W-XM&list=OLAK5uy_mhDbXSfabnY8-bZgFfiV0uLcG22C9BFwg"
+    "albumURL": "OcY1cK2W-XM"
   },
   {
-    "albumThum": "/resources/img/album/album_16.jpg",
+    "albumThum": "./resources/img/album/album_16.jpg",
     "albumName": "Good Night",
     "albumCategory": "Single",
     "albumDate": "2023.09.17",
-    "albumURL": "https://www.youtube.com/watch?v=xo8y5L72GtQ&list=OLAK5uy_mjmg-eR3jvdMIHx7tu5FY_snK9fKgiqhk"
+    "albumURL": "uGUhevX-9bk"
   },
   {
-    "albumThum": "/resources/img/album/album_15.jpg",
+    "albumThum": "./resources/img/album/album_15.jpg",
     "albumName": "말해줘",
     "albumCategory": "Single",
     "albumDate": "2023.08.12",
-    "albumURL": "https://www.youtube.com/watch?v=fH8HkkgvFuk&list=OLAK5uy_mBLimPI9SwJr9lMactot9gQnStIQAuQ3g"
+    "albumURL": "fH8HkkgvFuk"
   },
   {
-    "albumThum": "/resources/img/album/album_14.jpg",
+    "albumThum": "./resources/img/album/album_14.jpg",
     "albumName": "사랑해 주면 안 될까요?",
     "albumCategory": "EP",
     "albumDate": "2023.06.25",
-    "albumURL": "https://www.youtube.com/watch?v=Q2CrXUrF5RQ&list=OLAK5uy_kHp7znuLCXnvvVVtGyconbXRV_bsliZXQ"
+    "albumURL": "Q2CrXUrF5RQ"
   },
   {
-    "albumThum": "/resources/img/album/album_13.jpg",
+    "albumThum": "./resources/img/album/album_13.jpg",
     "albumName": "사랑한다고",
     "albumCategory": "Single",
     "albumDate": "2023.05.22",
-    "albumURL": "https://www.youtube.com/watch?v=ABO--YmQcGQ&list=OLAK5uy_nvIZba0QZd2-8VIF1H4SNj5tOwPV2En2E"
+    "albumURL": "ABO--YmQcGQ"
   },
   {
-    "albumThum": "/resources/img/album/album_12.jpg",
+    "albumThum": "./resources/img/album/album_12.jpg",
     "albumName": "CLOSER",
     "albumCategory": "Single",
     "albumDate": "2022.07.24",
-    "albumURL": "https://www.youtube.com/watch?v=YTjYuU8VNd4&list=OLAK5uy_kbComiyFFJcMsQo9wLXcs4zPOg6V_iSfs"
+    "albumURL": "YTjYuU8VNd4"
   },
   {
-    "albumThum": "/resources/img/album/album_11.jpg",
+    "albumThum": "./resources/img/album/album_11.jpg",
     "albumName": "LOVE",
     "albumCategory": "Single",
     "albumDate": "2022.06.24",
-    "albumURL": "https://www.youtube.com/watch?v=Uf9TjfPuNLQ&list=OLAK5uy_ln6bEtgjNvGEfEmvPUHukWWpmH09Ut0p4"
+    "albumURL": "Uf9TjfPuNLQ"
   },
   {
-    "albumThum": "/resources/img/album/album_10.jpg",
+    "albumThum": "./resources/img/album/album_10.jpg",
     "albumName": "24 years",
     "albumCategory": "Single",
     "albumDate": "2022.05.21",
-    "albumURL": "https://www.youtube.com/watch?v=i-hb64VbjhA&list=OLAK5uy_l8qg5CQOV82p_CAbeV0cKqcvqVQRfJV8M"
+    "albumURL": "i-hb64VbjhA"
   },
   {
-    "albumThum": "/resources/img/album/album_09.jpg",
+    "albumThum": "./resources/img/album/album_09.jpg",
     "albumName": "지저분해 (2022)",
     "albumCategory": "Single",
     "albumDate": "2022.04.21",
-    "albumURL": "https://www.youtube.com/watch?v=LossI_EUHpg&list=OLAK5uy_kb8vwuoMNFUJi7tRomBxG8vIOKCj7B2Zo"
+    "albumURL": "LossI_EUHpg"
   },
   {
-    "albumThum": "/resources/img/album/album_08.jpg",
+    "albumThum": "./resources/img/album/album_08.jpg",
     "albumName": "위로와 운명은 하나의 이름",
     "albumCategory": "Single",
     "albumDate": "2022.03.26",
-    "albumURL": "https://youtu.be/GUFNBwe1HVE"
+    "albumURL": "GUFNBwe1HVE"
   },
   {
-    "albumThum": "/resources/img/album/album_07.jpg",
+    "albumThum": "./resources/img/album/album_07.jpg",
     "albumName": "피곤하게도 산다",
     "albumCategory": "Single",
     "albumDate": "2020.10.27",
-    "albumURL": "https://youtu.be/lQVYjrQELjc"
+    "albumURL": "lQVYjrQELjc"
   },
   {
-    "albumThum": "/resources/img/album/album_06.jpg",
+    "albumThum": "./resources/img/album/album_06.jpg",
     "albumName": "August",
     "albumCategory": "Single",
     "albumDate": "2020.08.30",
-    "albumURL": "https://youtu.be/zeR8XWCVPqg"
+    "albumURL": "zeR8XWCVPqg"
   },
   {
-    "albumThum": "/resources/img/album/album_05.jpg",
+    "albumThum": "./resources/img/album/album_05.jpg",
     "albumName": "지저분해",
     "albumCategory": "Single",
     "albumDate": "2020.07.19",
-    "albumURL": "https://youtu.be/8JBaBz64xlc"
+    "albumURL": "8JBaBz64xlc"
   },
   {
-    "albumThum": "/resources/img/album/album_04.jpg",
+    "albumThum": "./resources/img/album/album_04.jpg",
     "albumName": "from.yourtime",
     "albumCategory": "Single",
     "albumDate": "2019.05.12",
-    "albumURL": "https://youtu.be/ieIGqqM7w9Y"
+    "albumURL": "ieIGqqM7w9Y"
   },
   {
-    "albumThum": "/resources/img/album/album_03.jpg",
+    "albumThum": "./resources/img/album/album_03.jpg",
     "albumName": "분홍 하늘",
     "albumCategory": "Single",
     "albumDate": "2019.04.20",
-    "albumURL": "https://youtu.be/RTZzz9uSPJs"
+    "albumURL": "RTZzz9uSPJs"
   },
   {
-    "albumThum": "/resources/img/album/album_02.jpg",
+    "albumThum": "./resources/img/album/album_02.jpg",
     "albumName": "왜냐하면 나는 널",
     "albumCategory": "Single",
     "albumDate": "2019.03.23",
-    "albumURL": "https://youtu.be/YNZUGOwHHEs"
+    "albumURL": "YNZUGOwHHEs"
   },
   {
-    "albumThum": "/resources/img/album/album_01.jpg",
+    "albumThum": "./resources/img/album/album_01.jpg",
     "albumName": "432",
     "albumCategory": "Single",
     "albumDate": "2018.12.22",
-    "albumURL": "https://youtu.be/Z_hjYwQoHlI"
+    "albumURL": "Z_hjYwQoHlI"
   }
 ]

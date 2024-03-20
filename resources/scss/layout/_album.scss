@@ -56,6 +56,7 @@
         li {
           width: calc(100% / 4);
           position: relative;
+          cursor: pointer;
 
           &.swiper-slide-active,
           &:hover {
@@ -103,5 +104,124 @@
         }
       }
     }
+  }
+
+  &__popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: rgba($color: #000000, $alpha: 0.5);
+    backdrop-filter: blur(5px);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &.on {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &-wrap {
+      width: auto;
+      height: auto;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      font-family: 'GmarketSansMedium';
+
+      .album-img {
+        position: relative;
+        z-index: 0;
+        width: 25vw;
+        aspect-ratio: 1/1;
+        margin-bottom: remSet(50px);
+
+        &::before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: -1;
+          box-shadow: 2px 2px 30px rgba($color: #ffffff, $alpha: 0.8);
+        }
+
+        .album-thum {
+          width: 100%;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .album-soundtrack {
+          position: absolute;
+          width: 95%;
+          height: 95%;
+          right: 0;
+          top: 2.5%;
+          z-index: -1;
+          transition: none;
+          opacity: 0;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          &.on {
+            transform: translateX(49%);
+            opacity: 1;
+            transition: all 0.5s;
+            img {
+              animation: rotate 5s infinite linear;
+            }
+          }
+        }
+      }
+
+      .album-info {
+        text-align: center;
+        color: #fff;
+        flex-grow: 1;
+
+        dt {
+          font-size: 2.5vw;
+          font-weight: 700;
+          margin-bottom: 1vw;
+        }
+
+        dd {
+          font-size: 1vw;
+          margin-bottom: 1vw;
+        }
+      }
+    }
+
+    .album-youtube-iframe {
+      position: absolute;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  0% {
+    transform: rotate(-360deg);
   }
 }
