@@ -140,7 +140,7 @@
         z-index: 0;
         width: 25vw;
         aspect-ratio: 1/1;
-        margin-bottom: remSet(50px);
+        margin: 0 auto remSet(50px);
 
         &::before {
           content: '';

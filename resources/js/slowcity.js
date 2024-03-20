@@ -1,70 +1,35 @@
-/* gsap */
-let links = gsap.utils.toArray('.navigation li a');
-
-links.forEach((link) => {
-  let element = document.querySelector(link.getAttribute('href')),
-    linkST = ScrollTrigger.create({
-      trigger: element,
-      start: 'top top',
-    });
-
-  ScrollTrigger.create({
-    trigger: element,
-    start: 'top center',
-    end: 'bottom center',
-    onToggle: (self) => setActive(link),
-  });
-});
-
-function setActive(link) {
-  links.forEach((el) => el.classList.remove('glitch'));
-  link.classList.add('glitch');
-}
-
-const introLogo = document.querySelectorAll('.intro__img-png');
-const introVideo = document.querySelectorAll('.intro__video');
-const introWrap = document.querySelectorAll('.intro__wrap');
-const body = document.body;
-const nav = document.querySelectorAll('.navigation');
-
-gsap.set(nav, {
-  opacity: 0,
-});
-
-gsap.to(introLogo, {
-  opacity: 0,
-  delay: 3,
-  duration: 5,
-
-  onComplete: function () {
-    gsap.to(introWrap, {
-      opacity: 1,
-      delay: 3,
-      duraion: 5,
-
-      onComplete: function () {
-        gsap.to(introWrap, {
-          background: '#000',
-
-          onComplete: function () {
-            setTimeout(function () {
-              const memberSection = document.getElementById('member');
-              body.classList.remove('-noneScroll');
-              memberSection.scrollIntoView({ behavior: 'smooth' });
-            }, 2000);
-
-            gsap.to(nav, {
-              opacity: 1,
-            });
-          },
-        });
-      },
-    });
-  },
-});
-
-/* //gsap */
 $(document).ready(function () {
+  /* gsap */
+  let links = gsap.utils.toArray('.navigation li a');
+
+  links.forEach((link) => {
+    let element = document.querySelector(link.getAttribute('href')),
+      linkST = ScrollTrigger.create({
+        trigger: element,
+        start: 'top top',
+      });
+
+    ScrollTrigger.create({
+      trigger: element,
+      start: 'top center',
+      end: 'bottom center',
+      onToggle: (self) => setActive(link),
+    });
+  });
+
+  function setActive(link) {
+    links.forEach((el) => el.classList.remove('glitch'));
+    link.classList.add('glitch');
+  }
+
+  const introLogo = document.querySelectorAll('.intro__img-png');
+  const introVideo = document.querySelectorAll('.intro__video');
+  const introWrap = document.querySelectorAll('.intro__wrap');
+  const body = document.body;
+  const nav = document.querySelectorAll('.navigation');
+
+  /* //gsap */
+
   const isMobile = (() => {
     const { userAgent, maxTouchPoints } = window.navigator;
     const isMac = /Macintosh/i.test(userAgent);
@@ -77,6 +42,43 @@ $(document).ready(function () {
   if (isMobile) {
     $('section').hide();
     $('.mobile-blur').show();
+    $('body').removeClass('-noneScroll');
+  } else {
+    gsap.set(nav, {
+      opacity: 0,
+    });
+
+    gsap.to(introLogo, {
+      opacity: 0,
+      delay: 3,
+      duration: 5,
+
+      onComplete: function () {
+        gsap.to(introWrap, {
+          opacity: 1,
+          delay: 3,
+          duraion: 5,
+
+          onComplete: function () {
+            gsap.to(introWrap, {
+              background: '#000',
+
+              onComplete: function () {
+                setTimeout(function () {
+                  const memberSection = document.getElementById('member');
+                  body.classList.remove('-noneScroll');
+                  memberSection.scrollIntoView({ behavior: 'smooth' });
+                }, 2000);
+
+                gsap.to(nav, {
+                  opacity: 1,
+                });
+              },
+            });
+          },
+        });
+      },
+    });
   }
 
   $('.intro-logo').hover(function () {
