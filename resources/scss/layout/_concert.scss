@@ -63,6 +63,7 @@
           z-index: 0;
           &::after {
             content: 'Already Finished';
+            color: #fff;
             font-family: 'Fugaz One', sans-serif;
             position: absolute;
             left: 0;
