@@ -80,7 +80,7 @@ $(document).ready(function () {
   }
 
   $('.intro-logo').hover(function () {
-    $('.intro__wrap').stop().fadeToggle();
+    $('.intro__wrap').toggleClass('hide');
   });
 
   $('.member__name a').click(function () {

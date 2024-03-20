@@ -140,6 +140,11 @@
     height: 100%;
     z-index: 99;
     opacity: 0;
+    transition: opacity 0.5s;
+    &.hide {
+      opacity: 0 !important;
+    }
+
     figure {
       width: 50vw;
       aspect-ratio: 1180/456;
