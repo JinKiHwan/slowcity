@@ -12,121 +12,6 @@
   z-index: 0;
   overflow: hidden;
 
-  &__inner {
-    width: 100%;
-    max-width: 55vw;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .slowcity {
-      display: flex;
-      width: 100%;
-      height: 16vw;
-      justify-content: center;
-
-      li {
-        width: 1.6vw;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        padding-top: 5vw;
-        padding-bottom: 3.3vw;
-
-        &.m-1 {
-          margin-right: 1vw;
-        }
-        &.m-2 {
-          margin-right: 1.5vw;
-        }
-
-        span {
-          width: 100%;
-          background: transparent;
-          flex-grow: 1;
-          display: block;
-          position: relative;
-
-          i {
-            display: block;
-            width: 100%;
-            height: 100%;
-            background: #fff;
-            position: absolute;
-            left: 0;
-            top: 0;
-          }
-        }
-
-        &.s {
-          span {
-            &:nth-child(1) {
-              height: 1.2vw;
-              margin-bottom: 1.3vw;
-            }
-          }
-        }
-        &.s2 {
-          span {
-            &:nth-child(2) {
-              height: 1.2vw;
-              margin-top: 1.3vw;
-            }
-          }
-        }
-
-        &.l {
-          padding-top: 0;
-        }
-
-        &.w,
-        &.w3 {
-          padding-bottom: 4.5vw;
-          span {
-          }
-        }
-
-        &.c2 {
-          justify-content: space-between;
-          span {
-            &:nth-child(1) {
-              margin-bottom: 2vw;
-            }
-          }
-        }
-
-        &.i {
-          padding-top: 2.5vw;
-
-          span:nth-child(1) {
-            height: 2.3vw;
-            margin-bottom: 1.2vw;
-            flex-grow: initial;
-          }
-        }
-        &.t {
-          padding-top: 0;
-        }
-
-        &.t2 {
-          justify-content: space-between;
-          span {
-            height: 2.5vw;
-            flex-grow: initial;
-          }
-        }
-
-        &.y {
-          padding-bottom: 4vw;
-        }
-        &.y2 {
-          padding-bottom: 0;
-        }
-      }
-    }
-  }
-
   &__wrap {
     height: 100%;
     margin: 0 auto;
@@ -141,6 +26,10 @@
     z-index: 99;
     opacity: 0;
     transition: opacity 0.5s;
+    @include mobile{
+      opacity: 1;
+    }
+
     &.hide {
       opacity: 0 !important;
     }
@@ -148,6 +37,10 @@
     figure {
       width: 50vw;
       aspect-ratio: 1180/456;
+
+      @include mobile{
+        width: 80vw;
+      }
     }
   }
 
@@ -162,6 +55,10 @@
     justify-content: center;
     align-items: center;
 
+    @include mobile{
+      display: none;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -175,6 +72,10 @@
     width: 100%;
     height: 100%;
     transform: translate(-50%, -50%);
+
+    @include mobile{
+      display: none;
+    }
 
     iframe {
       width: 100%;
@@ -191,66 +92,11 @@
   height: 100vh;
 }
 
-@mixin imgGlitch($name, $intensity, $width, $height, $top, $left) {
-  $steps: $intensity;
-
-  // Ensure the @keyframes are generated at the root level
-  @at-root {
-    // We need two different ones
-    @for $i from 1 through 2 {
-      @keyframes #{$name}-anim-#{$i} {
-        @for $i from 0 through $steps {
-          #{percentage($i*(1/$steps))} {
-            clip: rect(
-              random($height) + px,
-              $width + px,
-              random($height) + px,
-              0
-            );
-          }
-        }
-      }
-    }
-  }
-
-  > img {
-    position: absolute;
-    top: $top + px;
-    left: $left + px;
-  }
-  > img:nth-child(2),
-  > img:nth-child(3) {
-    clip: rect(0, 0, 0, 0);
-  }
-  > img:nth-child(2) {
-    left: ($left + 2) + px;
-    animation: #{$name}-anim-1 2s infinite linear alternate-reverse;
-  }
-  > img:nth-child(3) {
-    left: ($left - 2) + px;
-    animation: #{$name}-anim-2 3s infinite linear alternate-reverse;
-  }
-}
-
 .intro-logo {
   position: relative;
   cursor: pointer;
-  @include imgGlitch('image', 15, 1000, 1000, 10, 10);
   img {
     width: 100%;
-    //z-index: 10;
-
-    &.grayscale {
-      -webkit-filter: grayscale(1);
-      filter: grayscale(1);
-      //z-index: 5;
-    }
-
-    &.hue-rotate {
-      -webkit-filter: hue-rotate(90deg);
-      filter: hue-rotate(90deg);
-      //z-index: 1;
-    }
   }
 }
 

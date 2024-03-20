@@ -2,6 +2,12 @@
 
 .album {
   padding: remSet(100px) 0;
+
+  @include mobile{
+    height: auto;
+    padding-bottom: 20vw;
+  }
+
   &__inner {
     width: 95%;
     height: 100%;
@@ -17,6 +23,10 @@
       position: relative;
       margin-bottom: remSet(30px);
       padding-left: remSet(10px);
+
+      @include mobile{
+        font-size: remSet(80px);
+      }
 
       span {
         position: absolute;
@@ -36,9 +46,21 @@
         top: remSet(50px);
         display: flex;
         align-items: center;
+
+        @include mobile{
+          top: remSet(30px);
+        }
+
         a {
           margin-left: remSet(150px);
           width: remSet(100px);
+
+          @include mobile{
+            margin-left: 0;
+            &:last-child{
+              margin-left: remSet(50px);
+            }
+          }
 
           &.swiper-button-disabled {
             opacity: 0.2;
@@ -57,6 +79,10 @@
           width: calc(100% / 4);
           position: relative;
           cursor: pointer;
+
+          @include mobile{
+            width: calc(100% / 1.6);
+          }
 
           &.swiper-slide-active,
           &:hover {
@@ -90,12 +116,22 @@
             font-size: remSet(25px);
             margin-bottom: remSet(10px);
             font-family: 'TTHakgyoansimSamulhamR';
+
+            @include mobile{
+              font-size: 4vw;
+              margin-bottom: 2vw;
+            }
           }
 
           dd {
             font-size: remSet(18px);
             margin-bottom: remSet(5px);
             font-family: 'TTHakgyoansimSamulhamR';
+
+            @include mobile{
+              font-size: 2.5vw;
+              margin-bottom: 1vw;
+            }
 
             &.date {
               color: #d6d6d6;
@@ -141,6 +177,10 @@
         width: 25vw;
         aspect-ratio: 1/1;
         margin: 0 auto remSet(50px);
+
+        @include mobile{
+          width: 45vw;
+        }
 
         &::before {
           content: '';
@@ -198,11 +238,18 @@
           font-size: 2.5vw;
           font-weight: 700;
           margin-bottom: 1vw;
+
+          @include mobile{
+            font-size: 4vw;
+          }
         }
 
         dd {
           font-size: 1vw;
           margin-bottom: 1vw;
+          @include mobile{
+            font-size: 2vw;
+          }
         }
       }
     }
