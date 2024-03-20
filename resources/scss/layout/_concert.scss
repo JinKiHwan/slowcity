@@ -6,8 +6,7 @@
   margin-top: remSet(100px);
   z-index: 0;
   padding: 4vw 0;
-  @include mobile
-  {
+  @include mobile{
     padding: 10vw 0;
     height: auto;
   }
@@ -62,6 +61,7 @@
       @include mobile{
         height: auto;
         width: 60vw;
+        aspect-ratio: 1/1;
       }
 
       figure {

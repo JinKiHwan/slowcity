@@ -25,6 +25,7 @@
 
     @include mobile{
       width: 100%;
+      overflow: hidden;
     }
 
     &::before {
