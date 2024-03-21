@@ -6,7 +6,7 @@
   margin-top: remSet(100px);
   z-index: 0;
   padding: 4vw 0;
-  @include mobile{
+  @include mobile {
     padding: 10vw 0;
     height: auto;
   }
@@ -23,7 +23,7 @@
     pointer-events: none;
     overflow: hidden;
 
-    @include mobile{
+    @include mobile {
       height: auto;
     }
 
@@ -37,7 +37,7 @@
       transition: transform 0.3s;
       display: block;
       letter-spacing: -1px;
-      @include mobile{
+      @include mobile {
         font-size: 6vw;
       }
     }
@@ -58,7 +58,7 @@
     a {
       height: 100%;
 
-      @include mobile{
+      @include mobile {
         height: auto;
         width: 60vw;
         aspect-ratio: 1/1;
@@ -96,6 +96,10 @@
             background: rgba($color: #000000, $alpha: 0.5);
             opacity: 0;
             transition: all 0.3s;
+
+            @include mobile {
+              font-size: 5vw;
+            }
           }
         }
         img {
