@@ -110,7 +110,9 @@ $(document).ready(function () {
     $(this).toggleClass('on glitch');
 
     var dataText = $(this).data('text');
-    var correspondingFigure = $('.member__img').find('.' + dataText);
+    var id = $(this).attr('id');
+
+    var correspondingFigure = $('.member__img').find('.' + id);
     $('.member__img figure').removeClass('on');
     correspondingFigure.addClass('on');
   });
