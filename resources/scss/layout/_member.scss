@@ -12,7 +12,7 @@
     align-items: center;
     color: #fff;
 
-    @include mobile{
+    @include mobile {
       flex-direction: column;
     }
   }
@@ -23,7 +23,7 @@
     width: 45%;
     aspect-ratio: 763 / 583;
 
-    @include mobile{
+    @include mobile {
       width: 100%;
       overflow: hidden;
     }
@@ -52,7 +52,7 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      transition: opacity 0.3s;
+      transition: opacity 0.3s ease-in 0.1s;
       visibility: hidden;
 
       &.on {
@@ -85,7 +85,7 @@
     margin-left: remSet(50px);
     font-size: remSet(80px);
 
-    @include mobile{
+    @include mobile {
       margin-left: auto;
       margin-top: remSet(50px);
       text-align: right;

@@ -99,11 +99,11 @@ $(document).ready(function () {
         });
       },
     });
-  }
 
-  $('.intro-logo').hover(function () {
-    $('.intro__wrap').toggleClass('hide');
-  });
+    $('.intro-logo').hover(function () {
+      $('.intro__wrap').toggleClass('hide');
+    });
+  }
 
   $('.member__name a').click(function () {
     $('.member__name a').removeClass('on glitch');
