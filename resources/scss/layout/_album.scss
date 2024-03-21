@@ -33,6 +33,12 @@
         right: remSet(-35px);
         bottom: remSet(15px);
         font-size: remSet(30px);
+        width: remSet(30px);
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: rotate 3s infinite linear;
       }
     }
 
