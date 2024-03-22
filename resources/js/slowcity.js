@@ -105,8 +105,8 @@ $(document).ready(function () {
     });
   }
 
-  $('.member__name a').click(function () {
-    $('.member__name a').removeClass('on glitch');
+  $('.member__name span').click(function () {
+    $('.member__name span').removeClass('on glitch');
     $(this).toggleClass('on glitch');
 
     var dataText = $(this).data('text');
