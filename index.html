@@ -1,231 +1,194 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slowcity</title>
-    <!-- META -->
-    <meta property="og:title" content="Slowcity" />
-    <meta property="og:url" content="" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/resources/img/slowcity_og.png" />
-    <meta property="og:description" content="Slowcity" />
-    <meta name="description" content="Slowcity" />
-    <!-- FAVICON -->
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="./resources/images/favicon.png" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./resources/images/favicon.png" />
-    <!-- CSS -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="./resources/css/style.min.css" />
-    <!-- SCRIPT -->
-    <script defer src="https://www.youtube.com/iframe_api"></script>
-    <script defer src="./resources/js/jquery.min.js"></script>
-    <script defer src="./resources/js/swiper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
-    <script defer src="./resources/js/slowcity.js"></script>
-    <script defer src="./resources/js/tool-1.0.min.js"></script>
-    <script defer src="./resources/js/translation.js"></script>
-  </head>
-  <body class="ko -noneScroll">
-    <header class="header">
-      <nav>
-        <ul class="navigation">
-          <li><a href="#intro" data-text="INTRO">intro</a></li>
-          <li><a href="#member" data-text="MEMBER">member</a></li>
-          <li><a href="#album" data-text="ALBUM">album</a></li>
-          <li><a href="#concert" data-text="CONCERT">concert</a></li>
-        </ul>
-      </nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Slowcity</title>
+        <!-- META -->
+        <meta property="og:title" content="Slowcity" />
+        <meta property="og:url" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/resources/img/slowcity_og.png" />
+        <meta property="og:description" content="Slowcity" />
+        <meta name="description" content="Slowcity" />
+        <!-- FAVICON -->
+        <link rel="shortcut icon" type="image/x-icon" href="./resources/images/favicon.png" />
+        <link rel="icon" type="image/x-icon" href="./resources/images/favicon.png" />
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./resources/css/style.min.css" />
+        <!-- SCRIPT -->
+        <script defer src="https://www.youtube.com/iframe_api"></script>
+        <script defer src="./resources/js/jquery.min.js"></script>
+        <script defer src="./resources/js/swiper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+        <script defer src="./resources/js/slowcity.js"></script>
+        <script defer src="./resources/js/tool-1.0.min.js"></script>
+        <script defer src="./resources/js/translation.js"></script>
+    </head>
+    <body class="ko -noneScroll">
+        <header class="header">
+            <nav>
+                <ul class="navigation">
+                    <li><a href="#intro" data-text="INTRO">intro</a></li>
+                    <li><a href="#member" data-text="MEMBER">member</a></li>
+                    <li><a href="#album" data-text="ALBUM">album</a></li>
+                    <li><a href="#concert" data-text="CONCERT">concert</a></li>
+                </ul>
+            </nav>
 
-      <div class="mobile-btn">
-        <div class="wrap">
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </header>
-    <section class="intro" id="intro">
-      <div class="intro__img-png">
-        <img src="./resources/img/intro/slowcity-logo.png" alt="" />
-      </div>
-      <div class="intro__wrap">
-        <figure class="intro-logo">
-          <img src="./resources/img/intro/logo.png" alt="" />
-        </figure>
-      </div>
-
-      <div class="intro__video">
-        <iframe
-          src="https://www.youtube.com/embed/azsJwkfJ7P8?autoplay=1&mute=1&controls=0&playlist=azsJwkfJ7P8&loop=true"
-          title="엄마는 왜 (demo)"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-      </div>
-    </section>
-    <section class="member" id="member">
-      <div class="member__inner">
-        <div class="member__img">
-          <figure class="August on">
-            <img src="./resources/img/member/agust_gray.jpg" alt="" />
-          </figure>
-          <figure class="OneHa">
-            <img src="./resources/img/member/wonha_gray.jpg" alt="" />
-          </figure>
-          <figure class="Kyoungyoon_Kang">
-            <img src="./resources/img/member/kyungyun_gray.jpg" alt="" />
-          </figure>
-          <figure class="Kyumin_Park">
-            <img src="./resources/img/member/kyumin_gray.jpg" alt="" />
-          </figure>
-        </div>
-        <div class="member__name">
-          <h3>member</h3>
-          <span class="glitch on" id="August" data-text="August"
-            >August
-            <a
-              href="https://www.instagram.com/its8ugust/"
-              class="instagram"
-              target="_blank"></a>
-          </span>
-          <span id="OneHa" data-text="OneHa"
-            >OneHa<a
-              href="https://www.instagram.com/onehawannaknow/"
-              class="instagram"
-              target="_blank"></a
-          ></span>
-          <span id="Kyoungyoon_Kang" data-text="Kyoungyoon Kang"
-            >Kyoungyoon Kang<a
-              href="https://www.instagram.com/river_lord_gloss/"
-              class="instagram"
-              target="_blank"></a
-          ></span>
-          <span id="Kyumin_Park" data-text="Kyumin Park"
-            >Kyumin Park<a
-              href="https://www.instagram.com/parkkm9743/"
-              class="instagram"
-              target="_blank"></a
-          ></span>
-        </div>
-      </div>
-    </section>
-    <section class="album" id="album">
-      <div class="album__inner">
-        <h3>ALBUM <span>💿</span></h3>
-
-        <article class="swiper albumSwiper">
-          <div class="albumSwiper-control">
-            <a href="javascript:void(0)" class="albumSwiper__prev">
-              <img src="./resources/img/album/prev.svg" alt="" />
-            </a>
-            <a href="javascript:void(0)" class="albumSwiper__next">
-              <img src="./resources/img/album/next.svg" alt="" />
-            </a>
-          </div>
-          <ul class="swiper-wrapper"></ul>
-        </article>
-      </div>
-
-      <article class="album__popup">
-        <div class="album__popup-wrap">
-          <div class="album-img">
-            <figure class="album-thum">
-              <img src="" alt="" />
-            </figure>
-            <figure class="album-soundtrack">
-              <img src="./resources/img/album/soundtrack.png" alt="" />
-            </figure>
-
-            <div class="album-youtube-iframe">
-              <iframe
-                src="https://www.youtube.com/embed/"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+            <div class="mobile-btn">
+                <div class="wrap">
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-          </div>
-          <div class="album-info">
-            <dl>
-              <dt></dt>
-              <dd></dd>
-              <dd></dd>
-            </dl>
-          </div>
-        </div>
-      </article>
-    </section>
-    <section class="concert" id="concert">
-      <div class="loop-text swiper">
-        <div class="loop-text-road swiper-wrapper">
-          <span class="swiper-slide">SLOWCITY</span>
-          <span class="swiper-slide">SLOWCITY</span>
-          <span class="swiper-slide">SLOWCITY</span>
-          <span class="swiper-slide">SLOWCITY</span>
-          <span class="swiper-slide">SLOWCITY</span>
-          <span class="swiper-slide">SLOWCITY</span>
-          <span class="swiper-slide">SLOWCITY</span>
-          <span class="swiper-slide">SLOWCITY</span>
-          <span class="swiper-slide">SLOWCITY</span>
-          <span class="swiper-slide">SLOWCITY</span>
-          <span class="swiper-slide">SLOWCITY</span>
-          <span class="swiper-slide">SLOWCITY</span>
-        </div>
-      </div>
-      <div class="loop-text loop-text2 swiper" dir="rtl">
-        <div class="loop-text-road swiper-wrapper">
-          <span class="swiper-slide">CONCERT</span>
-          <span class="swiper-slide">CONCERT</span>
-          <span class="swiper-slide">CONCERT</span>
-          <span class="swiper-slide">CONCERT</span>
-          <span class="swiper-slide">CONCERT</span>
-          <span class="swiper-slide">CONCERT</span>
-          <span class="swiper-slide">CONCERT</span>
-          <span class="swiper-slide">CONCERT</span>
-          <span class="swiper-slide">CONCERT</span>
-          <span class="swiper-slide">CONCERT</span>
-          <span class="swiper-slide">CONCERT</span>
-          <span class="swiper-slide">CONCERT</span>
-        </div>
-      </div>
+        </header>
+        <section class="intro" id="intro">
+            <div class="intro__img-png">
+                <img src="./resources/img/intro/slowcity-logo.png" alt="" />
+            </div>
+            <div class="intro__wrap">
+                <figure class="intro-logo">
+                    <img src="./resources/img/intro/logo.png" alt="" />
+                </figure>
+            </div>
 
-      <div class="concert__inner">
-        <a href="https://www.instagram.com/p/C5hJdOEyKdM/" target="_blank">
-          <!-- <figure class="over"> -->
-          <figure>
-            <img src="./resources/img/concert/concert2.jpg" alt="" />
-          </figure>
-        </a>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="footer__inner">
-        <ul>
-          <li>SLOWCITY</li>
-          <li>
-            <a
-              href="https://www.instagram.com/slowcity_official/"
-              target="_blank">
-              <img src="./resources/img/footer/instagram.png" alt="" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/@slowcity_official"
-              target="_blank">
-              <img src="./resources/img/footer/youtube.png" alt="" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
-  </body>
+            <div class="intro__video">
+                <iframe src="https://www.youtube.com/embed/azsJwkfJ7P8?autoplay=1&mute=1&controls=0&playlist=azsJwkfJ7P8&loop=true" title="엄마는 왜 (demo)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="member" id="member">
+            <div class="member__inner">
+                <div class="member__img">
+                    <figure class="August on">
+                        <img src="./resources/img/member/agust_gray.jpg" alt="" />
+                    </figure>
+                    <figure class="OneHa">
+                        <img src="./resources/img/member/wonha_gray.jpg" alt="" />
+                    </figure>
+                    <figure class="Kyoungyoon_Kang">
+                        <img src="./resources/img/member/kyungyun_gray.jpg" alt="" />
+                    </figure>
+                    <figure class="Kyumin_Park">
+                        <img src="./resources/img/member/kyumin_gray.jpg" alt="" />
+                    </figure>
+                </div>
+                <div class="member__name">
+                    <h3>member</h3>
+                    <span class="glitch on" id="August" data-text="August"
+                        >August
+                        <a href="https://www.instagram.com/its8ugust/" class="instagram" target="_blank"></a>
+                    </span>
+                    <span id="OneHa" data-text="OneHa">OneHa<a href="https://www.instagram.com/onehawannaknow/" class="instagram" target="_blank"></a></span>
+                    <span id="Kyoungyoon_Kang" data-text="Kyoungyoon Kang">Kyoungyoon Kang<a href="https://www.instagram.com/river_lord_gloss/" class="instagram" target="_blank"></a></span>
+                    <span id="Kyumin_Park" data-text="Kyumin Park">Kyumin Park<a href="https://www.instagram.com/parkkm9743/" class="instagram" target="_blank"></a></span>
+                </div>
+            </div>
+        </section>
+        <section class="album" id="album">
+            <div class="album__inner">
+                <h3>ALBUM <span>💿</span></h3>
+
+                <article class="swiper albumSwiper">
+                    <div class="albumSwiper-control">
+                        <a href="javascript:void(0)" class="albumSwiper__prev">
+                            <img src="./resources/img/album/prev.svg" alt="" />
+                        </a>
+                        <a href="javascript:void(0)" class="albumSwiper__next">
+                            <img src="./resources/img/album/next.svg" alt="" />
+                        </a>
+                    </div>
+                    <ul class="swiper-wrapper"></ul>
+                </article>
+            </div>
+
+            <article class="album__popup">
+                <div class="album__popup-wrap">
+                    <div class="album-img">
+                        <figure class="album-thum">
+                            <img src="" alt="" />
+                        </figure>
+                        <figure class="album-soundtrack">
+                            <img src="./resources/img/album/soundtrack.png" alt="" />
+                        </figure>
+
+                        <div class="album-youtube-iframe">
+                            <iframe src="https://www.youtube.com/embed/" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <dl>
+                            <dt></dt>
+                            <dd></dd>
+                            <dd></dd>
+                        </dl>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="concert" id="concert">
+            <div class="loop-text swiper">
+                <div class="loop-text-road swiper-wrapper">
+                    <span class="swiper-slide">SLOWCITY</span>
+                    <span class="swiper-slide">SLOWCITY</span>
+                    <span class="swiper-slide">SLOWCITY</span>
+                    <span class="swiper-slide">SLOWCITY</span>
+                    <span class="swiper-slide">SLOWCITY</span>
+                    <span class="swiper-slide">SLOWCITY</span>
+                    <span class="swiper-slide">SLOWCITY</span>
+                    <span class="swiper-slide">SLOWCITY</span>
+                    <span class="swiper-slide">SLOWCITY</span>
+                    <span class="swiper-slide">SLOWCITY</span>
+                    <span class="swiper-slide">SLOWCITY</span>
+                    <span class="swiper-slide">SLOWCITY</span>
+                </div>
+            </div>
+            <div class="loop-text loop-text2 swiper" dir="rtl">
+                <div class="loop-text-road swiper-wrapper">
+                    <span class="swiper-slide">CONCERT</span>
+                    <span class="swiper-slide">CONCERT</span>
+                    <span class="swiper-slide">CONCERT</span>
+                    <span class="swiper-slide">CONCERT</span>
+                    <span class="swiper-slide">CONCERT</span>
+                    <span class="swiper-slide">CONCERT</span>
+                    <span class="swiper-slide">CONCERT</span>
+                    <span class="swiper-slide">CONCERT</span>
+                    <span class="swiper-slide">CONCERT</span>
+                    <span class="swiper-slide">CONCERT</span>
+                    <span class="swiper-slide">CONCERT</span>
+                    <span class="swiper-slide">CONCERT</span>
+                </div>
+            </div>
+
+            <div class="concert__inner">
+                <a href="https://www.instagram.com/p/C5hJdOEyKdM/" target="_blank">
+                    <figure class="over">
+                        <!-- <figure> -->
+                        <img src="./resources/img/concert/240608.jpg" alt="" />
+                    </figure>
+                </a>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__inner">
+                <ul>
+                    <li>SLOWCITY</li>
+                    <li>
+                        <a href="https://www.instagram.com/slowcity_official/" target="_blank">
+                            <img src="./resources/img/footer/instagram.png" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@slowcity_official" target="_blank">
+                            <img src="./resources/img/footer/youtube.png" alt="" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
 </html>
